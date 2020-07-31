@@ -2,7 +2,7 @@
 
     class Animal {
         
-        public $name, $legs = 2, $cold_blooded = false;
+        protected $name, $legs = 2, $cold_blooded = false;
 
 
         public function __construct($nama = "Binatang"){
@@ -22,6 +22,10 @@
                 return "true<br>";
             }
                 return "false<br>";
+        }
+
+        public function get_info(){
+            echo "<br>Name : {$this->name}<br>Legs : {$this->legs}<br>Cold Blooded : {$this->get_cold_blooded()}";
         }
 
     }
